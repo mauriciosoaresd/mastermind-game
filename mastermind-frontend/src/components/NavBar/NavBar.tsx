@@ -50,10 +50,11 @@ export default function NavBar() {
         className="font-bold text-lg flex group transition ease-in-out delay-150 ml-2"
       >
         <GameIcon className={"group-hover:text-red"} />
-        <h1 className="flex tracking-widest text-center items-center pl-2 group-hover:text-white">
+        <h1 className="flex tracking-widest text-center items-center group-hover:text-white sm:pl-2">
           Mastermind
         </h1>
       </Link>
+
       <div className="flex gap-4 items-center text-sm tracking-widest font-bold">
         {loading == true ? (
           <NavbarSkeleton />
@@ -67,7 +68,7 @@ export default function NavBar() {
             }
             <button
               onClick={() => handleLogout()}
-              className="border-solid border-2 font-bold rounded-full py-2 px-4 transition ease-in-out delay-150 hover:scale-110 hover:bg-pink hover:border-pink hover:text-red"
+              className="border-solid border-2 font-bold rounded-full py-2 px-2 transition ease-in-out delay-150 hover:scale-110 hover:bg-pink hover:border-pink hover:text-red"
             >
               LOGOUT
             </button>

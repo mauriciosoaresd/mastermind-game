@@ -4,15 +4,15 @@ import { faMedal } from "@fortawesome/free-solid-svg-icons";
 import { setMedal } from "@/utils/gameUtils";
 
 export default function HighscoreTable({ highscoreList }: { highscoreList: [] }) {
-    return <table className="w-full text-md text-left">
+    return <table className="w-full text-md text-center">
           <thead className="uppercase text-pink border-b">
             <tr>
-            <th scope="col" className="px-6 py-3"></th>
-              <th scope="col" className="px-6 py-3">
+            <th scope="col" className="hidden py-3 sm:block sm:px-6"></th>
+              <th scope="col" className="py-3 px-4 sm:px-6">
                 User
               </th>
-              <th scope="col" className="px-6 py-3"></th>
-              <th scope="col" className="px-6 py-3">
+              <th scope="col" className="py-3 px-4 md:px-6"></th>
+              <th scope="col" className="py-3 px-4 md:px-6">
                 Score
               </th>
             </tr>
@@ -20,31 +20,32 @@ export default function HighscoreTable({ highscoreList }: { highscoreList: [] })
           <tbody className="text-sm">
             {highscoreList.map((arr, idx) => (
                 <tr key={idx} className="border-b">
-                  <th
+                  <td
                     scope="row"
-                    className="px-6 py-4 font-medium whitespace-nowrap"
+                    className="hidden sm:block py-4 font-medium whitespace-nowrap"
                   >
                     <FontAwesomeIcon
                       size="3x"
                       color={arr[0] == 0 ? setMedal(null) : setMedal(idx)}
                       icon={faMedal}
                     />
-                  </th>
+                  </td>
 
                   <th
                     scope="row"
-                    className="px-6 py-4 font-medium whitespace-nowrap"
+                    align="center"
+                    className="py-4 font-medium whitespace-nowrap"
                   >
                     <UserAvatar url={arr[2]} />
                   </th>
 
                   <th
                     scope="row"
-                    className="px-6 py-4 font-medium whitespace-nowrap"
+                    className="m-auto py-4 font-medium whitespace-nowrap"
                   >
                     {arr[1]}
                   </th>
-                  <td className="px-6 py-4">{arr[0]}</td>
+                  <td className="py-4">{arr[0]}</td>
                 </tr>
               ))}
           </tbody>

@@ -16,7 +16,7 @@ export default function GuessPeg({ rowNum, idx }: { rowNum: number; idx: number 
 
   return (
     <div
-      className={`h-12 w-12 sm:mx-1 ${ rows[rowNum].row[idx] != null? "border-solid": "border-dotted"} border-2 border-white rounded-full 
+      className={`h-10 w-10 sm:h-12 sm:w-12 sm:mx-1 ${ rows[rowNum].row[idx] != null? "border-solid": "border-dotted"} border-2 border-white rounded-full 
       bg-[${rows[rowNum].row[idx] || "inherit"}]`}
       onClick={() => (rowNum == 0 ? setColor() : "")}
     ></div>

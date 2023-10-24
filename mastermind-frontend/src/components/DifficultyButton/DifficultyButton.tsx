@@ -30,7 +30,7 @@ export default function DifficultyButton({
       className="flex hover:bg-pink hover:text-red rounded-lg"
       onClick={() => handleSetLevel()}
     >
-      <h1 className="my-auto w-20">{text}</h1>
+      <h1 className="font-bold my-auto w-20">{text}</h1>
       <div className="flex">{ pegs() }</div>
     </button>
   );

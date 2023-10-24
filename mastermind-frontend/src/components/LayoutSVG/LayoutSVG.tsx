@@ -1,6 +1,6 @@
 export default function LayoutSVG() {
   return (
-    <div className="w-3/4 absolute top-0 right-0 z-[-1] overflow-hidden h-full">
+    <div className="w-[220%] sm:w-[120%] xl:w-3/4 absolute top-0 right-0 z-[-1] overflow-hidden h-full">
       <svg
         id="visual"
         viewBox="0 0 1920 1080"

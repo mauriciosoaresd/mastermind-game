@@ -7,7 +7,7 @@ export default function UserAvatar({ url } : { url: string}) {
         width={40}
         height={40}
         alt={"User Avatar"}
-        className="rounded-full mx-4"
+        className="rounded-full"
       />
     } else {
         return <svg
@@ -16,7 +16,7 @@ export default function UserAvatar({ url } : { url: string}) {
         viewBox="0 0 24 24"
         strokeWidth={1.5}
         stroke="currentColor"
-        className="w-[40px] h-[40px] mx-4 bg-purple rounded-full"
+        className="w-[40px] h-[40px] mx-2 bg-purple rounded-full"
       >
         <path
           strokeLinecap="round"

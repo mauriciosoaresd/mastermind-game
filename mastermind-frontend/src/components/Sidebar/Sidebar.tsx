@@ -14,7 +14,12 @@ export default function Sidebar() {
     <div className="flex flex-col w-fit ml-1 sm:ml-3 justify-between">
       <ColorPicker />
       <Timer />
-      <GameButton text="New Game" fn={() => dispatch(setNewGame())} />
+      <Link
+        href={"/highscore"}
+        className="border-solid border-2 rounded-full p-2 py-1 text-center my-2 transition ease-in-out delay-150 hover:scale-110 hover:bg-pink hover:border-pink hover:text-red">
+        Highscores
+      </Link>
+      <GameButton text="Restart" fn={() => dispatch(setNewGame())} />
       <Link
         href={"/options"}
         className="border-solid border-2 rounded-full p-2 py-1 text-center my-2 transition ease-in-out delay-150 hover:scale-110 hover:bg-pink hover:border-pink hover:text-red">
