@@ -2,7 +2,7 @@
 # Build stage
 #
 #FROM maven:3.6.0-jdk-11-slim AS build
-FROM maven:3.8.7-eclipse-temurin-19 AS build
+FROM maven:3.9.5-eclipse-temurin-21 AS build
 COPY . .
 RUN mvn clean package -Pprod -DskipTests
 
