@@ -9,7 +9,7 @@ RUN mvn clean package -Pprod -DskipTests
 #
 # Package stage
 #
-FROM eclipse-temurin-21
+FROM eclipse-temurin:19
 COPY --from=build /target/springboot-0.0.1-SNAPSHOT.jar springboot-0.0.1-SNAPSHOT.jar 
 # ENV PORT=8080
 EXPOSE 8080
