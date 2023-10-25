@@ -20,7 +20,6 @@ export default function GuessRow({
   );
 
   const checkSendGuess = () => {
-    // Checks if row hasn't null value in any peg
     if (!rowObj.row.includes(null)) {
       dispatch(sendGuess());
     }

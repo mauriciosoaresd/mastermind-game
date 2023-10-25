@@ -23,10 +23,6 @@ export default function NavBar() {
   };
 
   useEffect(() => {
-    // ON RENDER[and every redux userData change]:
-    // If there's no userData state, runs getData.
-    // getData, if there's token, fetches to the BackEnd checking if still valid
-    // returns a new token, decodes and set userData, dispatches redux login
     async function getData() {
       fetch("/api/auth/google").then(async (response) => {
         if (response.status === 200) {

@@ -68,3 +68,39 @@ build/
 
 ### VS Code ###
 .vscode/
+
+
+# dependencies
+mastermind-frontend/node_modules
+mastermind-frontend/.pnp
+mastermind-frontend/.pnp.js
+
+# testing
+mastermind-frontend/coverage
+
+# next.js
+mastermind-frontend/.next/
+mastermind-frontend/out/
+
+# production
+mastermind-frontend/build
+
+# misc
+mastermind-frontend/.DS_Store
+mastermind-frontend/*.pem
+
+# debug
+mastermind-frontend/npm-debug.log*
+mastermind-frontend/yarn-debug.log*
+mastermind-frontend/yarn-error.log*
+
+# local env files
+mastermind-frontend/.env*.local
+mastermind-frontend/.env.local
+
+# vercel
+mastermind-frontend/.vercel
+
+# typescript
+mastermind-frontend/*.tsbuildinfo
+mastermind-frontend/next-env.d.ts

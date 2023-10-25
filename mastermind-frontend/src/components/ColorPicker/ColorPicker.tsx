@@ -14,7 +14,8 @@ export default function ColorPicker() {
         {
             [...pegColors].slice(0, level).map((color, idx) => 
                 <button key={idx} className={`rounded-full h-12 w-12 m-2 border-[${color}] border-[10px] 
-                ${selectedColor == color? "bg-purple":`bg-[${color}]`}`} 
+                ${selectedColor == color? "bg-purple":`bg-[${color}]`}
+                hover:scale-105`} 
                 onClick={() => dispatch(selectColor(color))}>
                 </button>
             )
