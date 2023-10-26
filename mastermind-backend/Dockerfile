@@ -13,7 +13,7 @@
 # ENV PORT=8080
 # EXPOSE 8080
 # ENTRYPOINT ["java", "-jar", "mastermind-backend-0.0.1-SNAPSHOT.jar"]
-FROM ubuntu:latest AS build
+FROM debian:10 AS build
 
 RUN apt-get update
 RUN apt-get install openjdk-21-jdk -y
