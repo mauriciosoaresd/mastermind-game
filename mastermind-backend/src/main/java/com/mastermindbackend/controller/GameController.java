@@ -1,6 +1,7 @@
 package com.mastermindbackend.controller;
 
 import com.mastermindbackend.dto.ScoreDto;
+import com.mastermindbackend.entity.Highscore;
 import com.mastermindbackend.entity.User;
 import com.mastermindbackend.service.HighscoreService;
 import com.mastermindbackend.service.UserService;
@@ -53,7 +54,7 @@ public class GameController {
     }
 
     @GetMapping("/highscore")
-    public ResponseEntity<List> getHighscoreList() {
+    public ResponseEntity<List<Highscore>> getHighscoreList() {
         List list = highscoreService.getHighscoreListDesc();
         return new ResponseEntity(list, HttpStatus.OK);
     }
