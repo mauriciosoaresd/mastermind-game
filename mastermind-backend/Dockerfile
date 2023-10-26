@@ -11,6 +11,6 @@ RUN mvn clean package -Pprod -DskipTests
 #
 FROM eclipse-temurin:21
 COPY --from=build /target/mastermind-backend-0.0.1-SNAPSHOT.jar mastermind-backend-0.0.1-SNAPSHOT.jar
-# ENV PORT=8080
+ENV PORT=8080
 EXPOSE 8080
 ENTRYPOINT ["java", "-jar", "mastermind-backend-0.0.1-SNAPSHOT.jar"]
