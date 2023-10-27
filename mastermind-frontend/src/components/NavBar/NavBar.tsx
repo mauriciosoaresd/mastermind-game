@@ -17,8 +17,9 @@ export default function NavBar() {
 
   const handleLogout = () => {
     fetch("/api/auth/google", { method: "DELETE" }).then(async () => {
-      dispatch(logOut);
+      dispatch(logOut());
       setUserData(null);
+      dispatch(stopLoading());
     });
   };
 

@@ -17,8 +17,8 @@ export async function POST(request: NextRequest) {
       headers: new Headers({
         "Content-Type": "application/json",
         Authorization: `Bearer ${jwt}`,
-      }),
-    }).then(async (res) => console.log("res: ", res))
+      })
+    })
 
   }
 }
