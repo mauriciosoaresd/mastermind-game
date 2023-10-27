@@ -18,14 +18,17 @@ export async function POST(request: NextRequest) {
         "Content-Type": "application/json",
         Authorization: `Bearer ${jwt}`,
       }),
-    });
+    }).then(async (res) => console.log("res: ", res))
+
   }
 }
 
 export async function GET(request: NextRequest) {
   return fetch(`${BASE_URL}/mastermind/highscore`, {
     headers: new Headers({
-      "Content-Type": "application/json"
-    })
+      "Content-Type": "application/json",
+    }),
   })
+    .then(async (data) => NextResponse.json({ data: await data.json() }))
+    .catch((e) => NextResponse.json({ data: [] }));
 }

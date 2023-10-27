@@ -11,7 +11,7 @@ export default function Highscore() {
   useEffect(() => {
     const highscoreData = () =>
       fetch("/api/mastermind").then(async (res) => {
-        let data: [] = await res.json();
+        let { data } = await res.json();
         setHighscoreList(data);
       });
     highscoreData();
