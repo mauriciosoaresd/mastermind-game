@@ -15,7 +15,7 @@ export default function Home() {
         </p>
         <div className="space-y-4 sm:flex sm:space-y-0 sm:space-x-4">
           <Link
-            href="https://github.com/themesberg/landwind"
+            href="https://github.com/mauriciosoaresd/mastermind-game"
             className="bg-red rounded-full px-5 py-2 hover:scale-105"
           >
             View on GitHub
