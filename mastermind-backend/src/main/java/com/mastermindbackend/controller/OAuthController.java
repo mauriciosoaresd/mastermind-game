@@ -1,6 +1,8 @@
 package com.mastermindbackend.controller;
 
 import java.io.IOException;
+import java.io.InputStream;
+import java.lang.reflect.Field;
 import java.util.*;
 
 import com.azure.identity.OnBehalfOfCredential;
@@ -100,8 +102,6 @@ public class OAuthController {
 			user = userService.getByEmail(payload.mail).get();
 		} else {
 			String name = payload.displayName;
-			// CHECK IF PIC IS NULL
-			ProfilePhoto picture = payload.photo;
 			String email = payload.mail;
 			user = saveUser(email, name, null);
 		}
