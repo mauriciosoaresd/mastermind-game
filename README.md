@@ -1,10 +1,9 @@
 # Mastermind - Game Application 
 Mastermind is game application build with the power of Java Spring Boot and NextJS.
 
-
-![Home page](./images/snappy_login.png)
-
-![Game Page](./images/snappy.png)
+<p align="center">
+    <img width="220" style="border-radius: 5px" height="450" src="./mastermindgif.gif" alt="Intro">
+</p>
 
 ## Installation Guide
 
